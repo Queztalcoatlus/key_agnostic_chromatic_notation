@@ -202,8 +202,9 @@ wrap it around by subtracting `12`.
 
 In formula form, for root `r` and semitone offset `i`:
 
+Pitch class:
+
 $$
-\operatorname{pitch\ class} =
 \begin{cases}
 r + i, & \text{if } r + i \le 12 \\
 r + i - 12, & \text{if } r + i > 12
