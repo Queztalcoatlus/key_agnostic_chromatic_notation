@@ -374,8 +374,10 @@ The exact visual layout is not finalized.
 
 Current candidates include:
 
-1. Dodeka-style chromatic staff.
-2. Jianpu-style stacked numeric notation.
+1. [Dodeka-style chromatic staff](https://chromatone.center/theory/notes/alternative/dodeka/).
+   Dodeka places the twelve pitches on a four-line staff, with distinct
+   positions on, just above, halfway between, and just below the lines.
+2. [Jianpu-style numeric notation: an introduction](https://www.guitar-pro.com/docs/gp8/score/note/jianpu).
 
 Any layout must satisfy:
 
@@ -385,3 +387,20 @@ Any layout must satisfy:
 * polyphonic music remains readable
 
 The visual system is considered separate from the underlying pitch representation.
+
+## Dodeka Staff Mapping
+
+This diagram adds CN12 numbers to Dodeka's pitch positions. From bottom to
+top, the four lines mark `1` (C), `5` (E), `9` (G# / Ab), and `1` (C in
+the next octave). Each upward step is one semitone.
+
+![CN12 numbers on a Dodeka-style staff, ascending from C4 through all twelve pitch classes to C5.](assets/cn12-dodeka-mapping.svg)
+
+The dot above the final `1` marks the next octave. Letter names below the
+staff are lookup labels. This is a pitch-mapping study, not a rhythm example
+or a finalized CN12 score layout. Dodeka's own note lengths and rhythm symbols
+are separate from CN12's proposed use of conventional rhythm notation.
+
+Pitch positions follow [Dodeka's reading guide](https://dodekamusic.com/company/dodeka-blog/how-to-read-dodeka-sheet-music/).
+The [SVG diagram](assets/cn12-dodeka-mapping.svg) can be opened separately
+and enlarged without losing detail.
