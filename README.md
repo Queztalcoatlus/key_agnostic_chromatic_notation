@@ -1,5 +1,8 @@
 # CN12 Notation
 
+For an exploration of harmony, voice leading, and chord progressions using
+this notation, see [Music Theory in CN12](MUSIC_THEORY.md).
+
 ## Philosophy
 
 CN12 is a chromatic music notation system designed around modern 12-tone equal temperament.
@@ -285,6 +288,38 @@ is the step from the last note back to the root one octave higher.
 
 In traditional practice, the descending melodic minor scale commonly uses the
 natural minor pattern.
+
+---
+
+# All Major and Natural Minor Scales
+
+Each row pairs a major scale with its relative natural minor. They share
+the same pitch classes but start from different roots: the relative minor
+starts on the sixth note of the major scale, `9` semitones above its root
+(or `3` semitones below). Wrap the root number into `1` through `12`.
+
+Major uses root offsets `0 2 4 5 7 9 11`; natural minor uses
+`0 2 3 5 7 8 10` from its own root. Traditional root names are included
+for reference; names separated by `/` identify the same CN12 pitch class.
+
+The notes are in ascending scale order, wrapping after `12`. A smaller
+number after a wrap represents a higher note, not a downward movement.
+The repeated root at the next octave is omitted.
+
+| Major Root | Root Note Name | Major Scale | Relative Minor Root | Minor Root Note Name | Relative Natural Minor Scale |
+| ---------- | -------------- | ----------- | ------------------- | -------------------- | ---------------------------- |
+| `1` | A | `1 3 5 6 8 10 12` | `10` | F# / Gb | `10 12 1 3 5 6 8` |
+| `2` | A# / Bb | `2 4 6 7 9 11 1` | `11` | G | `11 1 2 4 6 7 9` |
+| `3` | B | `3 5 7 8 10 12 2` | `12` | G# / Ab | `12 2 3 5 7 8 10` |
+| `4` | C | `4 6 8 9 11 1 3` | `1` | A | `1 3 4 6 8 9 11` |
+| `5` | C# / Db | `5 7 9 10 12 2 4` | `2` | A# / Bb | `2 4 5 7 9 10 12` |
+| `6` | D | `6 8 10 11 1 3 5` | `3` | B | `3 5 6 8 10 11 1` |
+| `7` | D# / Eb | `7 9 11 12 2 4 6` | `4` | C | `4 6 7 9 11 12 2` |
+| `8` | E | `8 10 12 1 3 5 7` | `5` | C# / Db | `5 7 8 10 12 1 3` |
+| `9` | F | `9 11 1 2 4 6 8` | `6` | D | `6 8 9 11 1 2 4` |
+| `10` | F# / Gb | `10 12 2 3 5 7 9` | `7` | D# / Eb | `7 9 10 12 2 3 5` |
+| `11` | G | `11 1 3 4 6 8 10` | `8` | E | `8 10 11 1 3 4 6` |
+| `12` | G# / Ab | `12 2 4 5 7 9 11` | `9` | F | `9 11 12 2 4 5 7` |
 
 ---
 
