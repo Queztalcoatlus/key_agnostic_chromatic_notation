@@ -26,18 +26,22 @@ The octave consists of 12 unique pitch classes.
 
 | Number | Traditional Name |
 | ------ | ---------------- |
-| 1      | A                |
-| 2      | A# / Bb          |
-| 3      | B                |
-| 4      | C                |
-| 5      | C# / Db          |
-| 6      | D                |
-| 7      | D# / Eb          |
-| 8      | E                |
-| 9      | F                |
-| 10     | F# / Gb          |
-| 11     | G                |
-| 12     | G# / Ab          |
+| 1      | C                |
+| 2      | C# / Db          |
+| 3      | D                |
+| 4      | D# / Eb          |
+| 5      | E                |
+| 6      | F                |
+| 7      | F# / Gb          |
+| 8      | G                |
+| 9      | G# / Ab          |
+| 10     | A                |
+| 11     | A# / Bb          |
+| 12     | B                |
+
+C is `1`. The natural notes are C = `1`, D = `3`, E = `5`, F = `6`,
+G = `8`, A = `10`, and B = `12`. C through E are odd; F through B are
+even.
 
 Each pitch class has exactly one symbol.
 
@@ -45,9 +49,9 @@ Enharmonic distinctions are collapsed.
 
 Examples:
 
-* A# = Bb = 2
-* C# = Db = 5
-* G# = Ab = 12
+* A# = Bb = 11
+* C# = Db = 2
+* G# = Ab = 9
 
 ---
 
@@ -59,9 +63,9 @@ The pitch identity remains visually constant across octaves.
 
 Examples:
 
-* 1 = A
-* 1̇ = A one octave higher
-* 1̣ = A one octave lower
+* 1 = C
+* 1̇ = C one octave higher
+* 1̣ = C one octave lower
 
 The exact octave-marking convention is not finalized.
 
@@ -107,7 +111,7 @@ Chords are represented as pitch-class structures and interval structures.
 The interval structure begins with `+0` for the root, followed by the intervals
 between successive chord tones.
 
-Examples:
+Examples with root `1` (C):
 
 Major triad:
 
@@ -214,37 +218,37 @@ r + i - 12, & \text{if } r + i > 12
 \end{cases}
 $$
 
-For A major, the root is A = `1`:
+For C major, the root is C = `1`:
 
 | Calculation | Pitch Class |
 | ----------- | ----------- |
-| 1 + 0       | 1           |
-| 1 + 2       | 3           |
-| 1 + 4       | 5           |
-| 1 + 5       | 6           |
-| 1 + 7       | 8           |
-| 1 + 9       | 10          |
-| 1 + 11      | 12          |
-
-A major:
-
-`1 3 5 6 8 10 12`
-
-For C major, the root is C = `4`:
-
-| Calculation | Wrapped Pitch Class |
-| ----------- | ------------------- |
-| 4 + 0       | 4                   |
-| 4 + 2       | 6                   |
-| 4 + 4       | 8                   |
-| 4 + 5       | 9                   |
-| 4 + 7       | 11                  |
-| 4 + 9 - 12  | 1                   |
-| 4 + 11 - 12 | 3                   |
+| 1 + 0 | 1 |
+| 1 + 2 | 3 |
+| 1 + 4 | 5 |
+| 1 + 5 | 6 |
+| 1 + 7 | 8 |
+| 1 + 9 | 10 |
+| 1 + 11 | 12 |
 
 C major:
 
-`4 6 8 9 11 1 3`
+`1 3 5 6 8 10 12`
+
+For A major, the root is A = `10`:
+
+| Calculation | Pitch Class |
+| ----------- | ----------- |
+| 10 + 0 | 10 |
+| 10 + 2 | 12 |
+| 10 + 4 - 12 | 2 |
+| 10 + 5 - 12 | 3 |
+| 10 + 7 - 12 | 5 |
+| 10 + 9 - 12 | 7 |
+| 10 + 11 - 12 | 9 |
+
+A major:
+
+`10 12 2 3 5 7 9`
 
 Other key types are calculated in the same way using one of the scale patterns
 listed below. This makes a key a transposition of a reusable pitch-class
@@ -308,18 +312,18 @@ The repeated root at the next octave is omitted.
 
 | Major Root | Root Note Name | Major Scale | Relative Minor Root | Minor Root Note Name | Relative Natural Minor Scale |
 | ---------- | -------------- | ----------- | ------------------- | -------------------- | ---------------------------- |
-| `1` | A | `1 3 5 6 8 10 12` | `10` | F# / Gb | `10 12 1 3 5 6 8` |
-| `2` | A# / Bb | `2 4 6 7 9 11 1` | `11` | G | `11 1 2 4 6 7 9` |
-| `3` | B | `3 5 7 8 10 12 2` | `12` | G# / Ab | `12 2 3 5 7 8 10` |
-| `4` | C | `4 6 8 9 11 1 3` | `1` | A | `1 3 4 6 8 9 11` |
-| `5` | C# / Db | `5 7 9 10 12 2 4` | `2` | A# / Bb | `2 4 5 7 9 10 12` |
-| `6` | D | `6 8 10 11 1 3 5` | `3` | B | `3 5 6 8 10 11 1` |
-| `7` | D# / Eb | `7 9 11 12 2 4 6` | `4` | C | `4 6 7 9 11 12 2` |
-| `8` | E | `8 10 12 1 3 5 7` | `5` | C# / Db | `5 7 8 10 12 1 3` |
-| `9` | F | `9 11 1 2 4 6 8` | `6` | D | `6 8 9 11 1 2 4` |
-| `10` | F# / Gb | `10 12 2 3 5 7 9` | `7` | D# / Eb | `7 9 10 12 2 3 5` |
-| `11` | G | `11 1 3 4 6 8 10` | `8` | E | `8 10 11 1 3 4 6` |
-| `12` | G# / Ab | `12 2 4 5 7 9 11` | `9` | F | `9 11 12 2 4 5 7` |
+| `1` | C | `1 3 5 6 8 10 12` | `10` | A | `10 12 1 3 5 6 8` |
+| `2` | C# / Db | `2 4 6 7 9 11 1` | `11` | A# / Bb | `11 1 2 4 6 7 9` |
+| `3` | D | `3 5 7 8 10 12 2` | `12` | B | `12 2 3 5 7 8 10` |
+| `4` | D# / Eb | `4 6 8 9 11 1 3` | `1` | C | `1 3 4 6 8 9 11` |
+| `5` | E | `5 7 9 10 12 2 4` | `2` | C# / Db | `2 4 5 7 9 10 12` |
+| `6` | F | `6 8 10 11 1 3 5` | `3` | D | `3 5 6 8 10 11 1` |
+| `7` | F# / Gb | `7 9 11 12 2 4 6` | `4` | D# / Eb | `4 6 7 9 11 12 2` |
+| `8` | G | `8 10 12 1 3 5 7` | `5` | E | `5 7 8 10 12 1 3` |
+| `9` | G# / Ab | `9 11 1 2 4 6 8` | `6` | F | `6 8 9 11 1 2 4` |
+| `10` | A | `10 12 2 3 5 7 9` | `7` | F# / Gb | `7 9 10 12 2 3 5` |
+| `11` | A# / Bb | `11 1 3 4 6 8 10` | `8` | G | `8 10 11 1 3 4 6` |
+| `12` | B | `12 2 4 5 7 9 11` | `9` | G# / Ab | `9 11 12 2 4 5 7` |
 
 ---
 
