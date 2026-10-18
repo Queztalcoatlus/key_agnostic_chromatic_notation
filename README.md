@@ -87,18 +87,18 @@ Examples:
 
 | Interval    | Distance |
 | ----------- | -------- |
-| Minor 2nd   | 1        |
-| Major 2nd   | 2        |
-| Minor 3rd   | 3        |
-| Major 3rd   | 4        |
-| Perfect 4th | 5        |
-| Tritone     | 6        |
-| Perfect 5th | 7        |
-| Minor 6th   | 8        |
-| Major 6th   | 9        |
-| Minor 7th   | 10       |
-| Major 7th   | 11       |
-| Octave      | 12       |
+| Minor 2nd   | +1        |
+| Major 2nd   | +2        |
+| Minor 3rd   | +3        |
+| Major 3rd   | +4        |
+| Perfect 4th | +5        |
+| Tritone     | +6        |
+| Perfect 5th | +7        |
+| Minor 6th   | +8        |
+| Major 6th   | +9        |
+| Minor 7th   | +10       |
+| Major 7th   | +11       |
+| Octave      | +12       |
 
 Intervals should be visually and numerically consistent across all keys.
 
@@ -396,11 +396,5 @@ the next octave). Each upward step is one semitone.
 
 ![CN12 numbers on a Dodeka-style staff, ascending from C4 through all twelve pitch classes to C5.](assets/cn12-dodeka-mapping.svg)
 
-The dot above the final `1` marks the next octave. Letter names below the
-staff are lookup labels. This is a pitch-mapping study, not a rhythm example
-or a finalized CN12 score layout. Dodeka's own note lengths and rhythm symbols
-are separate from CN12's proposed use of conventional rhythm notation.
 
 Pitch positions follow [Dodeka's reading guide](https://dodekamusic.com/company/dodeka-blog/how-to-read-dodeka-sheet-music/).
-The [SVG diagram](assets/cn12-dodeka-mapping.svg) can be opened separately
-and enlarged without losing detail.
